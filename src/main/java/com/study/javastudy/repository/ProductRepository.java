@@ -2,6 +2,8 @@ package com.study.javastudy.repository;
 
 
 import com.study.javastudy.model.Product;
+import com.study.javastudy.model.exception.ResourceNotFoundException;
+
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
@@ -66,7 +68,7 @@ public class ProductRepository {
         Optional<Product> foundProduct = getById(product.getId());
 
         if(foundProduct.isEmpty()){
-            throw new InputMismatchException("Product not Found");
+            throw new ResourceNotFoundException("Product not Found");
         }
         //first: remove old product
         delete(product.getId());
