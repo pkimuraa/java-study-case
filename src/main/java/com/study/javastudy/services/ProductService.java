@@ -1,3 +1,5 @@
+package com.study.javastudy.services;
+
 import com.study.javastudy.repository.ProductRepository;
 import com.study.javastudy.model.Product;
 import java.util.List;
@@ -8,7 +10,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 
-public class ProductService{
+public class ProductService{    
 
     @Autowired
     private ProductRepository productRepository; 
@@ -56,7 +58,7 @@ public class ProductService{
     public Product update(Integer id, Product product){
 
         product.setId(id); 
-        
+
         return productRepository.update(product);
     }
 }

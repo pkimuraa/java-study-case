@@ -23,7 +23,7 @@ public class Product{
         this.id = id;
     }
 
-    public String getName(String name){
+    public String getName(){
         return name;
     }
 
